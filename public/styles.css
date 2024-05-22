@@ -1,0 +1,82 @@
+/* Style de base pour l'HTML et le Body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto'; /* Applique la police monospace */
+    font-size: 19px; /* Taille de police de base */
+}
+
+/* Styles pour les titres pour assurer une bonne lisibilité */
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+    padding-top: 15px;
+    margin-top: 5px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #333; /* Couleur foncée pour un meilleur contraste */
+}
+/* Redimentionner le container */
+.container-fluid {
+    max-width: 80%;
+}
+
+/* Style pour la colonne de navigation */
+.nav-column {
+    position: fixed;  /* Fixe la colonne de navigation */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20%;  /* Largeur de la colonne de navigation */
+    overflow-y: auto;  /* Permet le défilement vertical si nécessaire */
+    background-color: #03989E;  /* Couleur de fond pour la navigation */
+}
+
+/* Style pour la colonne de contenu */
+.content-column {
+    margin-left: 20%;  /* Décale le contenu pour ne pas être sous la navigation */
+    width: 80%;  /* Largeur du contenu */
+    height: 90vh;  /* Hauteur de la vue pour le défilement */
+    overflow-y: auto;  /* Permet le défilement vertical du contenu */
+    padding: 20px;  /* Espacement intérieur pour le contenu */
+    background: #fff;  /* Fond blanc pour le contenu */
+}
+
+.mt-4{
+    color: #fff;
+}
+.nav-link {
+    cursor: pointer;
+    padding: 5px;  /* Espacement pour les liens */
+    color: white;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Style de base pour les images */
+.img-fluid {
+    max-width: 90%;  /* Les images sont responsives */
+    height: auto;  /* Maintient le ratio */
+    display: block;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;  /* Espacement après les images */
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+/* Style pour l'image agrandie */
+.img-enlarged {
+    position: fixed;
+    z-index: 1050; /* Plus haut que le contenu normal pour s'afficher au-dessus */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Ajustez en fonction de vos besoins */
+    max-height: 80%; /* Ajustez en fonction de vos besoins */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: zoom-out;
+}

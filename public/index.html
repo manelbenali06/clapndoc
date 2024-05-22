@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Clap'N Doc - Document Generation - Wiki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Colonne de navigation avec des liens -->
+            <div class="col-md-3 nav-column">
+                <h3 class="mt-4">Contenu</h3>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#generate-document" class="nav-link">Générer un document</a></li>
+                    <li class="nav-item"><a href="#esign-document" class="nav-link">Signature électronique</a></li>
+                    <li class="nav-item"><a href="#download-document" class="nav-link">Télécharger le document</a></li>
+                    <li class="nav-item"><a href="#archive-document" class="nav-link">Archiver le document</a></li>
+                    <li class="nav-item"><a href="#send-vault" class="nav-link">Envoyer au Coffre-fort</a></li>
+                    <li class="nav-item"><a href="#email-document" class="nav-link">Envoyer par e-mail</a></li>
+                </ul>
+            </div>
+            <!-- Colonne de contenu avec des descriptions -->
+            <div class="col-md-9 content-column">
+                <section id="generate-document">
+                    <h4>Générer un document pour un salarié</h4>
+                    <p>Les gestionnaires peuvent générer des documents pour les salariés et pour les types de documents pour lesquels ils disposent des permissions nécessaires. Lors de la génération d'un document, chaque modèle de document contient des champs remplis avec les informations relatives au salarié et d'autres champs à compléter par le gestionnaire si besoin.</p>
+                    <p><strong>Navigation: My Population > sélectionner le salarié pour lequel vous voulez générer le document > choisir generate a document</strong></p>
+                    <img src="images/generation.png" class="img-fluid" alt="Selecting a Template">
+
+                    <h5>1.Étape Sélectionner un modèle :</h5>
+                    <p>Depuis la page <strong>Select template</strong> du salarié, sélectionnez le modèle de document que vous voulez générer.</p>
+                    <ul>
+                        <li>Sélectionnez le type de document correspondant.</li>
+                        <li>Sélectionnez le modèle de document à partir duquel vous souhaitez générer le document.</li>
+                        <li>Sélectionnez la date de génération que vous souhaitez.</li>
+                        <li>Sélectionnez Suivant.</li>
+                    </ul>
+                    <img src="images/1.png" class="img-fluid" alt="Selecting a Template">
+                    <h5>2.Étape Remplir et prévisualiser :</h5>
+                    <p>Les champs sont automatiquement remplis avec des informations extraites du profil du salarié depuis SuccessFactors. Certains champs doivent être complétés manuellement par le gestionnaire.</p>
+                    <p>Cliquez sur le bouton Générate preview pour consulter le document. Une fois terminé, cliquez sur le bouton Suivant pour générer le document.</p>
+                    <img src="images/2_gene.png" class="img-fluid" alt="Selecting a Template">
+                    <h5>3.Étape Generate Document :</h5>
+                    <ul>
+                        <li><strong> Send to signature:</strong>Générez un fichier PDF et l'envoyez au salarié pour le faire signer par voie électronique.</li>
+                        <li><strong>Download:</strong> Générez un fichier PDF, DOC(X) ou ODT (selon les formats de sortie configurés pour le modèle de document) et téléchargez-le sur votre disque dur.</li>
+                        <li><strong>Archive:</strong> Cette option permet de générer un fichier PDF et de l’archiver dans le profil du salarié dans PeopleDoc.</li>
+                        <li><strong>Send to eVault:</strong>Générez un fichier PDF et envoyez-le dans Employee Vault.</li>
+                        <li><strong>Send by email:</strong> Envoyez le document par email au salarié, si son adresse est enregistrée dans son profil de salarié.</li>
+                    </ul>
+                    <img src="images/sign.png" class="img-fluid" alt="Selecting a Template">
+                </section>
+                <!-- Section Faire signer le document généré par voie électronique -->
+                <section id="esign-document">
+                    <h4>Envoyer le document en signature éléctronique</h4>
+                    <p>Après avoir généré le document, vous pouvez l’envoyer pour une signature électronique avec DocuSign si vous disposez des permissions nécessaires.</p>
+                    <ul>
+                        <li>Sélectionnez l’option Send to Signature.</li>
+                        <li>Sélectionnez le type de signature dont vous avez besoin pour ce document.</li>
+                        <li>Entrez le Titre du document. Utilisez un ou plusieurs raccourcis de Nom de modèle, Type de document ou Nom de salarié pour remplir automatiquement le champ du titre du document.</li>
+                        <li>Sélectionnez le bouton Send to signature.</li>
+                    </ul>
+                    <img src="images/3.png" class="img-fluid" alt="Selecting a Template">
+                    <h5>1.Choisir les signataires:</h5>
+                    <p>Depuis la page <strong>Choice of signatories</strong> , vous pouvez:</p>
+                    <ul>
+                        <li>Sélectionnez un ensemble de signataires déja prédéfini.</li>
+                        <li>Ajouter un RH ou un manager dans votre processus de signature.</li>
+                        <li>Choisir entre une notification par message ou une double authentification.</li>
+                        <li>Sélectionnez Suivant.</li>
+                    </ul>
+                    <img src="images/1_sign.png" class="img-fluid" alt="Selecting a signatories">
+                    <h5>2.Placer les signataires:</h5>
+                    <p>Depuis la page<strong>Signature placement</strong> , vous pouvez:</p>
+                    <ul>
+                        <li>Placer les signatures dans la zone dédié.</li>
+                        <li>Sélectionnez Suivant.</li>
+                    </ul>
+                    <img src="images/2_sign.png" class="img-fluid" alt="Selecting a signatories">
+                    <h5>3.Choisir les options de signature:</h5>
+                    <p>Depuis la page <strong>Choice of options</strong>, vous pouvez:</p>
+                    <ul>
+                        <li>Ajouter un message supplémentaire si besoin.</li>
+                        <li>Choisir une date limite de signature.</li>
+                        <li>Choisir de recevoir une notifications par email lorceque les signataires accepetent ou refusent de signer.</li>
+                        <li>Envoyer le document en signature en cliquant sur <strong>Send to signature.</strong></li>
+                    </ul>
+                    <img src="images/3_sign.png" class="img-fluid" alt="Selecting a signatories">
+                </section>
+                <!-- Section pour télécharger le document généré -->
+                <section id="download-document">
+                    <h4>Télécharger le document généré</h4>
+                    <p>Après avoir généré le document, vous pouvez le télécharger sur votre ordinateur.</p>
+                    <p>Sélectionnez l’option Download. Sélectionnez le format du document, si applicable, et cliquez sur Télécharger. Le ou les formats disponibles dépendent de ce qui a été configuré au niveau du modèle de document.</p>
+                    <img src="images/downoald.png" class="img-fluid" alt="Downloading Document">
+                </section>
+                <section id="archive-document">
+                    <!-- Section Archiver le document généré -->
+                    <h4>Archiver le document généré dans le dossier du salarié</h4>
+                    <p>Après avoir généré le document, vous pouvez générer un fichier PDF à archiver dans le dossier du salarié.</p>
+                    <ul>
+                        <li>Sélectionnez l’option Archiver.</li>
+                        <li>Dans le champ Titre du document, saisissez un nom pour le document. Utilisez un ou plusieurs des raccourcis disponibles pour remplir automatiquement le champ Titre du document.</li>
+                        <li>Cliquez sur le bouton Archiver.</li>
+                    </ul>
+                    <img src="images/Archive.png" class="img-fluid" alt="Archiving Document">
+                </section>
+                <section id="send-vault">
+                    <!-- Section Envoyer le document généré vers l’Employee Vault -->
+                    <h4>Envoyer le document généré vers l’Employee Vault</h4>
+                    <p>Après avoir généré le document, vous pouvez générer un fichier PDF et l’envoyer vers l’Employee Vault.</p>
+                    <ul>
+                        <li>Sélectionnez l'option Envoyer dans le coffre-fort électronique.</li>
+                        <li>Entrez le Titre du document. Vous pouvez utiliser un ou plusieurs raccourcis de Nom de modèle, Type de document ou Nom de salarié pour remplir automatiquement le champ du titre du document.</li>
+                        <li>Cochez la case pour envoyer un e-mail de notification au salarié.</li>
+                        <li>Sélectionnez le bouton Send to evault.</li>
+                    </ul>
+                    <img src="images/evault.png" class="img-fluid" alt="Sending to Employee Vault">
+                </section>
+                <!-- Section Envoyer le document généré par e-mail -->
+                <section id="email-document">
+                    <h4>Envoyer le document généré par e-mail</h4>
+                    <p>Après avoir généré le document, vous pouvez l'envoyer au salarié par e-mail si leur adresse e-mail est bien renseignée dans leur profil salarié.</p>
+                    <ul>
+                        <li>Sélectionnez l’option Envoyer par e-mail.</li>
+                        <li>Le salarié recevra le document généré à l'adresse e-mail renseignée dans son profil salarié.</li>
+                    </ul>
+                    <img src="images/email.png" class="img-fluid" alt="Sending Document by Email">
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
